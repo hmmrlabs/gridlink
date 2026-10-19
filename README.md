@@ -1,8 +1,8 @@
-# GridLink
+# Hammer Sheets MCP (GridLink)
 
 **Turn an AI conversation into a spreadsheet you can share.**
 
-GridLink is a small Rust MCP server that creates links to editable GridCraft spreadsheets. It runs locally over stdio or inside a hosted Streamable HTTP transport. No database, accounts, file uploads, or document storage are required.
+Hammer Sheets MCP is powered by GridLink, a small Rust MCP server that creates links to editable GridCraft spreadsheets. It runs locally over stdio or inside a hosted Streamable HTTP transport. No database, accounts, file uploads, or document storage are required.
 
 ## Install
 
@@ -26,9 +26,9 @@ Add to a local MCP client, such as Claude Desktop:
 
 Use the path printed by `command -v gridlink` (`where gridlink` on Windows). Run the binary without arguments; it speaks newline-delimited MCP JSON-RPC on stdin/stdout. Diagnostics go to stderr.
 
-Set `GRIDLINK_VIEWER_URL` to use another HTTPS viewer origin. The default is `https://view.hammerlabs.ai`.
+Set `GRIDLINK_VIEWER_URL` to use another HTTPS viewer origin. The default is `https://sheets.hammerlabs.ai`.
 
-For remote MCP clients, connect to `https://view.hammerlabs.ai/mcp` once that deployment is live. Remote connector availability depends on the client and plan. Unlike local mode, a hosted transport sees tool inputs while processing them; the provided service does not store them.
+For remote MCP clients, connect to `https://sheets.hammerlabs.ai/mcp` once that deployment is live. Remote connector availability depends on the client and plan. Unlike local mode, a hosted transport sees tool inputs while processing them; the provided service does not store them.
 
 ## Tools
 

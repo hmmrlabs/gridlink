@@ -10,7 +10,7 @@ fn main() {
 }
 fn serve() -> Result<(), Box<dyn std::error::Error>> {
     let base = std::env::var("GRIDLINK_VIEWER_URL")
-        .unwrap_or_else(|_| "https://view.hammerlabs.ai".into());
+        .unwrap_or_else(|_| "https://sheets.hammerlabs.ai".into());
     gridlink::source_url(&base)?;
     let mut input = io::stdin().lock();
     let mut output = io::stdout().lock();

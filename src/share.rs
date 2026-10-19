@@ -111,8 +111,9 @@ mod tests {
         };
         spec.validate().unwrap();
         let encoded = encoded(&serde_json::to_vec(&spec).unwrap()).unwrap();
-        let url = url::Url::parse(&link("https://view.hammerlabs.ai", "sheet", &encoded).unwrap())
-            .unwrap();
+        let url =
+            url::Url::parse(&link("https://sheets.hammerlabs.ai", "sheet", &encoded).unwrap())
+                .unwrap();
         assert!(url.query().is_none());
         let decoded_spec = spreadsheet(&encoded).unwrap();
         assert_eq!(decoded_spec.sheets[0].rows[0][1], "=A1*2");
